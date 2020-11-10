@@ -682,7 +682,7 @@ input[type=range]::-webkit-slider-thumb {
 	position: relative;
 }
 
-.picture1{background-image: url(img/picture1.png);}
+/*.picture1{background-image: url(img/picture1.png);}
 .picture2{background-image: url(img/picture2.png);}
 .picture3{background-image: url(img/picture3.png);}
 .picture4{background-image: url(img/picture4.png);}
@@ -693,7 +693,7 @@ input[type=range]::-webkit-slider-thumb {
 .picture9{background-image: url(img/picture4.png);}
 .picture10{background-image: url(img/picture5.png);}
 .picture11{background-image: url(img/picture2.png);}
-.picture12{background-image: url(img/picture8.png);}
+.picture12{background-image: url(img/picture8.png);}*/
 
 .idForWalk{
 	color: #898989;
@@ -913,11 +913,11 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .dubai{
-	background-image: url(img/dubai.png);
+	/*background-image: url(img/dubai.png);*/
 }
 
 .whater{
-	background-image: url(img/whater.png);
+	/*background-image: url(img/whater.png);*/
 }
 
 .comments{
@@ -1124,7 +1124,7 @@ footer{
 	}
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-device-width: 480px) {
 	.peoplesFromTo.activeDeployed{
 		z-index: 11;
 	}
