@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Турист</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/c15b90e456.js" crossorigin="anonymous"></script>
+</head>
+<!-- https://www.figma.com/file/w0205MSkoiRjLOCRv5Q7iD/Touristo%5B1%5D?node-id=0%3A1 -->
+<body>
+	<div class="wrapper">
+		<nav id="navlol">
+			<div class="bluePlaceHolder">Touristo</div>
+			<div class="navigation">
+				<div class="navigationFirstChild">
+					<p>Про компанию</p>
+					<p>Услуги</p>
+					<p>Типовые занятия</p>
+					<p>Оплата и доставка</p>
+					<p>Контакты</p>
+				</div>
+				<div class="navigationSecondChild">
+					<p><a href="#" class="hoverBlue">Путешествия</a></p>
+					<p><a href="#" class="hoverBlue">Распродажи</a></p>
+					<p><a href="#" class="hoverBlue">Cтраны</a></p>				
+					<p><a href="#" class="hoverBlue">Мой путешествия</a></p>
+				</div>
+			</div>
+			<div class="contact">
+				<div class="wrLine"></div>
+				<div class="btn PhoneNumber">
+					<div id="phoneIconCont">
+						<div id="circle">
+							<i class="fas fa-phone-alt phone"></i>
+						</div>
+					</div>
+					<div id="numberText">
+						<div class="boldText numberPhone">+23 235 235 324</div>
+						<div class="boldText call">Вызвать</div>
+					</div>
+				</div>
+				<div class="wrLine"></div>
+				<div class="btn find">
+					<p>Найти Путешествие</p>
+				</div>
+			</div>
+		</nav>
+		<nav id="mobileNav">
+			<div id="mobileNavContent">
+				<div class="logoMobile">
+					<p>Touristo</p>
+				</div>
+				<div class="GlobeConteiner"><i class="fas fa-globe"></i></div>
+				<div class="burgerMenu">
+					<div class="burgerMenuContent">
+						<span class="burgerMenuSpans firstSpanMenu"></span>
+						<span class="burgerMenuSpans secondSpanMenu"></span>
+						<span class="burgerMenuSpans thirdSpanMenu"></span>
+					</div>
+				</div>
+				<div class="mainContentInMobileNav">
+					<div class="textInMobileNavigationBlin">
+						<div class="textOfTheBlinMobileNav firstTextOfTheBlinMobileNav">
+							<p>О компании</p>
+							<p>Услуги</p>
+							<p>Часто задаваемые вопросы</p>
+							<p>Оплата и доставка</p>
+							<p>Контакты</p>
+						</div>
+						<div class="textOfTheBlinMobileNav secondTextOfTheBlinMobileNav">
+							<p>Путешествия</p>
+							<p>Распродажи</p>
+							<p>Страны</p>
+							<p>Мои путешествия</p>
+						</div>
+					</div>
+					<div class="contact">
+						<div class="wrLine"></div>
+						<div class="btn PhoneNumber">
+							<div id="phoneIconCont">
+								<div id="circle">
+									<i class="fas fa-phone-alt phone"></i>
+								</div>
+							</div>
+							<div id="numberText">
+								<div class="boldText numberPhone">+23 235 235 324</div>
+								<div class="boldText call">Вызвать</div>
+							</div>
+						</div>
+						<div class="wrLine"></div>
+						<div class="btn find">
+							<p>Найти Путешествие</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div id="headerSettings">
+				<p class="hiboldtext">Куда отправимся</p>
+				<p class="lowboldtext">Вы можете осуществить поиск по нескольким напрьямкам одновременно</p>
+				<div class="serchBox">
+					<label for="searchInput" id="serchForekfef"><i class="fas fa-search searchIcon"></i></label>
+					<input type="text" id="searchInput" placeholder="Город Страна">
+				</div>
+				<div id="moreSettingCont">
+					<p id="moreSettings">Расширенный пойск</p>
+				</div>
+				<div class="settings">
+					<div class="flex">
+						<div class="bettwen date flexPice">
+							<div class="calendarCont">
+								<i class="far fa-calendar-alt"></i>
+							</div>
+							<div class="dateSettings">
+								Месяц год дата
+							</div>
+							<div class="setDate">
+								<div class="choseDate" onclick="setDataFunc('c 1окт - до 2ноя')">
+									<span>c 1окт</span>
+									<span>-</span>
+									<span>до 3ноя</span>
+								</div>
+								<div class="choseDate" onclick="setDataFunc('c 3окт - до 3ноя')">
+									<span>c 5окт</span>
+									<span>-</span>
+									<span>до 12ноя</span>
+								</div>
+								<div class="choseDate" onclick="setDataFunc('c 4окт - до 4ноя')">
+									<span>c 4сен</span>
+									<span>-</span>
+									<span>до 8янв</span>
+								</div>
+								<div class="choseDate" onclick="setDataFunc('c 5окт - до 5ноя')">
+									<span>c 30сен</span>
+									<span>-</span>
+									<span>до 19дек</span>
+								</div>
+								<div class="choseDate" onclick="setDataFunc('c 6окт - до 6ноя')">
+									<span>c 24июн</span>
+									<span>-</span>
+									<span>до 3ноя</span>
+								</div>
+								<div class="choseDate" onclick="setDataFunc('c 7окт - до 7ноя')">
+									<span>c 14июл</span>
+									<span>-</span>
+									<span>до 8дек</span>
+								</div>
+							</div>
+						</div>
+						<div class="rangeSettings flexPice">
+							<div class="whoMuchTime">
+								Продолжительность
+							</div>
+							<div class="dbrangeSettings">
+								<div class="middle">
+									<div class="multi-range-slider">
+										<input type="range" id="input-left" min="2" max="120" value="0">
+										<input type="range" id="input-right" min="2" max="120" value="120">
+
+										<div class="slider">
+											<div class="track"></div>
+											<div class="range"></div>
+											<div class="thumb left">
+												<div class="whiteFilledBall">
+													
+												</div>
+											</div>
+											<div class="thumb right">
+												<div class="whiteFilledBall">
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="fromto">
+								<p>От 2 дней</p>
+								<p>До 120 дней</p>
+							</div>
+						</div>
+						<div class="bettwen whoManyPeople flexPice">
+							<div class="peapleCOnt">
+								<i class="fas fa-male"></i>
+							</div>
+							<div class="HowManyPeopleS">
+								Количество людей
+							</div>
+							<div class="downarrowcont">
+								<i class="downArrow"></i>
+							</div>
+							<div class="peoplesFromTo">
+								<div class="sectionOld">
+									<div class="peoleFromToMath">
+										<p>Взрослых</p>
+										<span id="oldOutPut">0</span>
+									</div>
+									<div class="plusminusmenu">
+										<div class="oldPlus blueSircle plusForOld">
+											<i class="fas fa-plus"></i>
+										</div>
+										<div class="oldMinus blueSircle minusForOld">
+											<i class="fas fa-minus"></i>
+										</div>
+									</div>
+								</div>
+								<div class="sectionNew">
+									<div class="peoleFromToMath">
+										<p>Детей</p>
+										<span id="newOutPut">0</span>
+									</div>
+									<div class="plusminusmenu">
+										<div class="newPlus blueSircle">
+											<i class="fas fa-plus plusForNew"></i>
+										</div>
+										<div class="newMinus blueSircle">
+											<i class="fas fa-minus minusForNew"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="findCont">
+					<div class="StartToFind">
+						<p>Найти путешествие</p>
+					</div>
+				</div>
+			</div>
+			<div class="fillSircle">
+				<i class="fas fa-phone-alt phone"></i>
+			</div>
+		</header>
+		<section class="cardsCont">
+			<p id="whereGone">Заспродажа путешествий</p>
+			<div class="placeWhereGone">
+				<div class="PlaceWherGoneIs">СНГ</div>
+				<div class="PlaceWherGoneIs">Куба</div>
+				<div class="PlaceWherGoneIs">Москва</div>
+				<div class="PlaceWherGoneIs">Сочи</div>
+				<div class="PlaceWherGoneIs">Казань</div>
+				<div class="PlaceWherGoneIs">Калиненград</div>
+				<div class="PlaceWherGoneIs">Станбул</div>
+				<div class="PlaceWherGoneIs">Санкт-Петербург</div>
+				<div class="PlaceWherGoneIs">Париж</div>
+				<div class="PlaceWherGoneIs">Амстердам</div>
+				<div class="PlaceWherGoneIs">Лондон</div>
+				<div class="PlaceWherGoneIs">Прага</div>
+			</div>
+			<div class="cards">
+				<div class="card">
+						<div class="imageCont picture1">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+				</div>
+					<div class="card">
+						<div class="imageCont picture2">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture3">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture4">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Лондон</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture5">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture6">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Париж</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture7">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture8">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture9">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Прага</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture10">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture11">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Москва</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="imageCont picture12">
+							<div class="Rasprodaja">
+								<p>Распродажа</p>
+							</div>
+						</div>
+						<div class="InfoCard">
+							<p class="idForWalk">id 239476</p>
+							<p class="PlaceChose">Санкт Петербург</p>
+							<p class="whereIgoChose">Париж/Москва/Лондон</p>
+							<div class="DateSeted">
+								<i class="far fa-calendar-alt"></i>
+								<p>C 2.00 - 3.00 по москве</p>
+							</div>
+							<div class="hoursForWhit">
+								<div>
+									<i class="fas fa-globe"> </i>
+									<p> Весь мир</p>
+								</div>
+								<div>
+									<i class="fas fa-plane"></i>
+									<p>5.2 часа</p>
+								</div>
+							</div>
+							<div class="CardInfo">
+								<div>
+									<div>Оценка:</div>
+									<div>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="fas fa-star fillStar"></i>
+										<i class="far fa-star NotFillStar"></i>
+									</div>
+								</div>
+								<div>
+									<div>Питание:</div>
+									<div>3 раза</div>
+								</div>
+							</div>
+							<p class="price">2346 в / неделю</p>
+							<p>34$</p>
+							<div class="TakeByHand">
+								<p><i class="fas fa-compass"></i> Забронировать</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cardGoRight goForCard">
+					<div class="arrowRight goForRightByCard"></div>
+				</div>
+			</div>
+		</section>
+		<div id="regist">
+			<br>
+			<p class="middleTile">Опримезируйте ваш пойск подписавшись на рассылку</p>
+			<div class="reg">
+				<div>
+					<p class="SendBy">По email:</p>
+					<div class="regForm">
+						<div class="center">
+							<i class="far fa-envelope-open"></i>					
+						</div>
+						<div>
+							<input type="email" class="regInput" placeholder="Email">
+						</div>
+						<div class="subScribe">
+							<p>Подписаться</p>	
+						</div>
+					</div>
+					<p class="impo">Не более 1 сообщения в неделю. Никакого спама. Вы сможете отписаться в любое время пожелаете.</p>
+				</div>
+				<div class="smsStndBy">
+					<p class="SendBy">По смс:</p>
+					<div class="regForm">
+						<div class="center">
+							<i class="fas fa-mobile-alt"></i>
+						</div>
+						<div>
+							<input type="text" name="" class="regInput" placeholder="Email">
+						</div>
+						<div class="subScribe">
+							<p>Подписаться</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="spectionPlace">
+			<p class="place74635658">Специальные позиций</p>
+			<div class="sectiondwq">
+				<div class="imageOf whater">
+					<div class="textInThePicture">
+						<p class="TitleOfTheSptionPlace">Поездки на море</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum culpa accusantium omnis quasi, iure id eaque minus repudiandae vero nam saepe iste sunt officiis labore quas optio, deleniti perspiciatis!</p>
+						<p class="LearnMoreBlin">Узнать Больше</p>
+					</div>
+				</div>
+				<div class="imageOf dubai">
+					<div class="textInThePicture">
+						<p class="TitleOfTheSptionPlace">Шопинг на дордое</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, error amet asperiores, minima sed ratione culpa vitae aperiam consequuntur tempora id dolorum repellendus reprehenderit non ab unde. Quasi quibusdam, voluptas?</p>
+						<p class="LearnMoreBlin">Узнать Больше</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="comments">
+			<p class="turistComents">Комментарий туристов</p>
+			<div class="comentSlider">
+				<div class="circleForArrow goForLeftBlin"><div class="arrowLeft"></div></div>
+				<div class="sliderOfTheComents">
+					<div class="comment">
+						<div class="commentContent">
+							<p class="hisName">Наталия (25)</p>
+							<p class="hisTextObautUs">Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования.</p>
+						</div>
+					</div>
+					<div class="comment">
+						<div class="commentContent">
+							<p class="hisName">Олександ (43)</p>
+							<p class="hisTextObautUs">Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования.</p>
+						</div>
+					</div>
+					<div class="comment">
+						<div class="commentContent">
+							<p class="hisName">Антонина (34)</p>
+							<p class="hisTextObautUs">Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования.</p>
+						</div>
+					</div>
+					<div class="comment">
+						<div class="commentContent">
+							<p class="hisName">Наталия (25)</p>
+							<p class="hisTextObautUs">Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования.</p>
+						</div>
+					</div>
+					<div class="comment">
+						<div class="commentContent">
+							<p class="hisName">Олександ (43)</p>
+							<p class="hisTextObautUs">Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования.</p>
+						</div>
+					</div>
+					<div class="comment">
+						<div class="commentContent">
+							<p class="hisName">Антонина (34)</p>
+							<p class="hisTextObautUs">Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования. Хороший отдых начинается с планирования. А планирование требует времени, знаний и опыта. Мы гарантируем вам удовольствие не только от отдыха, но еще до того, от процесса его планирования.</p>
+						</div>
+					</div>
+					<!-- Тут можно вставить любое количество блоков с данными настройками -->
+				</div>
+				<div class="circleForArrow goForRightBlin"><div class="arrowRight"></div></div>
+			</div>
+		</section>
+		<footer>
+			<div>
+				<div class="logo">
+					<p>Touristo</p>
+				</div>
+				<div>
+					<p class="BlueText"><i class="far fa-envelope-open"></i> mansmixkulov@gmail.com</p>
+					<p class="BoldText"><i class="fas fa-mobile-alt"></i> +2342 325 253 235</p> 
+					<p class="BoldText"><i class="fas fa-mobile-alt"></i> +2355 346 235 679</p>
+					<p class="BoldText mapMarket"><i class="fas fa-map-marker-alt"></i> м. Ужгород,	ул. Ивана Франко 1в, оф. 1</p>
+					<div class="socseti">
+						<div class="filledSircleForSocSeti">
+							<i class="fab fa-facebook-f"></i>
+						</div>
+						<div class="filledSircleForSocSeti">
+							<i class="fab fa-vk"></i>
+						</div>
+						<div class="filledSircleForSocSeti">
+							<i class="fab fa-instagram"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footerChoto">
+				<div class="mobileFooterIsNotMobileFooter">
+					<p class="BlueTextFooter">Путешествия</p>
+					<div class="hr"></div>
+					<p class="BoldText">Отдых</p>
+					<p class="BoldText">По работе</p>
+					<p class="BoldText">С Семьёй</p>
+				</div>
+				<div class="mobileFooterIsNotMobileFooter">
+					<p class="BlueTextFooter">Распродажи</p>
+					<div class="hr"></div>
+					<p class="BoldText">Скидка -39%</p>
+					<p class="BoldText">Скидка -12%</p>
+				</div>
+				<div class="mobileFooterIsNotMobileFooter">
+					<p class="BlueTextFooter">Страны</p>
+					<div class="hr"></div>
+					<p class="BoldText">Египет</p>
+					<p class="BoldText">Малдавия</p>
+					<p class="BoldText">СНГ</p>
+					<p class="BoldText">Россия</p>
+					<p class="BoldText">Греция</p>
+					<p class="BoldText">Лондон</p>
+					<p class="BoldText">Турция</p>
+					<p class="BoldText">Москва</p>
+					<p class="BoldText">ОМС</p>
+				</div>
+				<div class="mobileFooterIsNotMobileFooter eveuh4398467y">
+					<p class="BlueTextFooter">Про нас</p>
+					<div class="hr"></div>
+					<p class="BoldText">Мы</p>
+					<p class="BoldText">Очень</p>
+					<p class="BoldText">Любим</p>
+					<p class="BoldText">По</p>
+					<p class="BoldText">Кушать</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
