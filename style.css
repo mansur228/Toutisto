@@ -1079,18 +1079,16 @@ footer{
 	display: none;
 }
 
-@media screen and (max-width: 1480px) {
-	.cards{
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-}
 
 @media screen and (max-width: 1230px) {
 	#navlol{
 		display: grid;
 		grid-template-rows: 1fr 1fr 1fr;
 		grid-template-columns: 1fr;
+	}
+
+	.cards{
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 
 	.bluePlaceHolder{
@@ -1122,9 +1120,7 @@ footer{
 	.wrLine{
 		display: none;
 	}
-}
 
-@media screen and (max-device-width: 300px) {
 	.peoplesFromTo.activeDeployed{
 		z-index: 11;
 	}
@@ -1208,7 +1204,7 @@ footer{
 	}
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-device-width: 630px) {
 	.cards{
 		grid-template-columns: 1fr;
 	}
