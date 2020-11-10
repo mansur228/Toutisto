@@ -138,3 +138,10 @@ function openMenu(){
 	document.querySelector('.thirdSpanMenu').classList.toggle('active');
 	document.querySelector('.mainContentInMobileNav').classList.toggle('active');
 }
+
+document.querySelector('.bluePlaceHolder').addEventListener('click' , deployedMenu);
+
+function deployedMenu(){
+	document.querySelector('.navigation').classList.toggle('active');
+	document.querySelector('.contact').classList.toggle('active');
+}
