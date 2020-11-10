@@ -1124,7 +1124,7 @@ footer{
 	}
 }
 
-@media screen and (max-device-width: 480px) {
+@media screen and (max-device-width: 300px) {
 	.peoplesFromTo.activeDeployed{
 		z-index: 11;
 	}
