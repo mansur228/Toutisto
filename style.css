@@ -1428,6 +1428,10 @@ footer{
 }
 
 @media screen and (max-width: 798px) {
+	.fillSircle{
+		display: none;
+	}
+
 	.card{
 		height: 440px;
 	    border-radius: 9px;
