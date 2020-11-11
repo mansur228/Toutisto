@@ -261,7 +261,7 @@ input{
 	justify-content: center;
 	align-items: center;
 	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 190px;
 }
 
 .StartToFind{
@@ -1428,6 +1428,19 @@ footer{
 }
 
 @media screen and (max-width: 798px) {
+	.find{
+		visibility: visible;
+	}
+
+	.contact{
+		visibility: visible;
+		height: 120px;
+	}
+
+	.PhoneNumber{
+		visibility: visible;
+	}
+
 	.fillSircle{
 		display: none;
 	}
